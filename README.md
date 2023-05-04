@@ -10,7 +10,7 @@ No machine learning/data methods were used
    def SpatialImprovement(imagePath, invBinary):
    ```
    imagePath: path of images
-   invBinary: bool, with image threshold to invBinary or not
+   invBinary: bool, whether image threshold to invBinary or not
    ```
    1) Median blur
    2) Gaussian blur
@@ -20,9 +20,44 @@ No machine learning/data methods were used
    6) Sobel filteration
    7) Laplacian Approximation
    8) Normalisation
-Phase two: 
+   
+   ### 2) Thresholding of Images:
+  def ThresholdTrial(imagePath, lowerAreaThreshold, upperAreaThreshold, thresholdType, invBinary):
+  ```
+  imagePath: path of images
+  lowerAreaThreshold: lower threshold
+  upperAreaThreshold:upper threshold
+  thresholdType: string, type of threshold used
+  invBinary: bool, whether image threshold to invBinary or not
+  ```
+  1) Denoising coloured image
+  2) Grayscale
+  3) Gaussian Blur
+  4) Adaptive Mean Thresholding
+  5) Adaptive Gaussian Thresholding
+  6) Otsu Thresholding
+  7) Triangle Thresholding
+  
+   ### 3) Edge Detection of Images:
+  def EdgeDetection(imagePath, Canny):
+  ```
+  imagePath: path of images
+  Canny: bool, whether or not Canny edge detection was used
+  ```
+  1) Denoising of coloured image
+  2) Grayscale
+  3) Sobel filter
+  4) Laplacian filter
+  5) High bost filter
+  6) Super high boost filter
+  7) Prewitt filter
+  8) Scharr filter
+  9) Increase Contrast 
+  10) Canny edge detection
+
+  
+### Phase two: 
     Identification
-```
 # Dependencies
 ```python
 from __future__ import print_function
