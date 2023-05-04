@@ -1,13 +1,25 @@
 # SVHN-Recognition
 Street View House Number Recognition using computer vision and perception techniques
+No machine learning/data methods were used
 
 ## Project Phases
-```
-Phase one: 
-    Segmentation and Boundary Creation
-    ## Stages of Image Processing:
-    ### 1) Spatial Improvement of Images: 
-    
+### Phase one: 
+   ### Segmentation and Boundary Creation
+   ### Stages of Image Processing:
+   ### 1) Spatial Improvement of Images:
+   def SpatialImprovement(imagePath, invBinary):
+    imagePath: path of images
+    invBinary: bool, with image threshold to invBinary or not
+   ```
+   1) Median blur
+   2) Gaussian blur
+   3) Sharpening Box filter
+   4) Grayscale
+   5) Identify background/baseline/foreground and remove backgorund
+   6) Sobel filteration
+   7) Laplacian Approximation
+   8) Normalisation
+   ```
 Phase two: 
     Identification
 ```
