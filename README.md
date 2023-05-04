@@ -64,12 +64,12 @@ No machine learning/data methods were used
   1) Grayscale
   2) Canny edge detection
   3) MinMaxLocator
-  4) Draw blue, red, black rectangles around specific intensity points__
-  5) Blue rectangle: start point: *(min intenisty x max intensity )/2*__
-                     end point: *start point x + image width/3, start point y + image height*__
-  7) Red rectangle: start point: *(max intensity/2 + min intensity)/2*__
+  4) Draw blue, red, black rectangles around specific intensity points__<br />
+  5) Blue rectangle: start point: *(min intenisty x max intensity )/2*__<br />
+                     end point: *start point x + image width/3, start point y + image height*__<br />
+  7) Red rectangle: start point: *(max intensity/2 + min intensity)/2*__<br />
                     end point: *start point x + image width/2, start point y + image height*__ 
-  8) Black rectangle: start point:*(min intenisty + max intensity )/2*__
+  8) Black rectangle: start point:*(min intenisty + max intensity )/2*__<br />
                       end point:*start point x + image width/3, start point y + image height*__
   9) Allow user to select and crop required area
   
