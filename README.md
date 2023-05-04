@@ -14,6 +14,7 @@ No machine learning/data methods were used
    import copy
    from numpy import asarray
    from PIL import ImageEnhance, Image
+   import IPython.display as IPD
    ```
    ## Implemented Functionality
    ```
