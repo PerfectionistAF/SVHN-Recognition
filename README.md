@@ -65,12 +65,12 @@ No machine learning/data methods were used
   2) Canny edge detection
   3) MinMaxLocator
   4) Draw blue, red, black rectangles around specific intensity points
-  5) Blue rectangle:__<br />start point: *(min intenisty x max intensity )/2*
-                     end point: *start point x + image width/3, start point y + image height*
-  7) Red rectangle: __<br />start point: *(max intensity/2 + min intensity)/2*
-                    end point: *start point x + image width/2, start point y + image height*
-  8) Black rectangle: __<br />start point:*(min intenisty + max intensity )/2*
-                      __<br />end point:*start point x + image width/3, start point y + image height*
+  5) Blue rectangle:<br />start point: *(min intenisty x max intensity )/2*
+                     <br />end point: *start point x + image width/3, start point y + image height*
+  7) Red rectangle: <br />start point: *(max intensity/2 + min intensity)/2*
+                    <br />end point: *start point x + image width/2, start point y + image height*
+  8) Black rectangle: <br />start point:*(min intenisty + max intensity )/2*
+                      <br />end point:*start point x + image width/3, start point y + image height*
   9) Allow user to select and crop required area
   
    ### 5) Corner Harris Detection of Images:
