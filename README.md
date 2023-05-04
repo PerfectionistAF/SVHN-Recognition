@@ -8,8 +8,10 @@ No machine learning/data methods were used
    ### Stages of Image Processing:
    ### 1) Spatial Improvement of Images:
    def SpatialImprovement(imagePath, invBinary):
-imagePath: path of images
-invBinary: bool, with image threshold to invBinary or not
+   ```
+   imagePath: path of images
+   invBinary: bool, with image threshold to invBinary or not
+   ```
    ```
    1) Median blur
    2) Gaussian blur
