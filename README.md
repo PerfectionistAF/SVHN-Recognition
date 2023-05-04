@@ -12,7 +12,6 @@ No machine learning/data methods were used
    imagePath: path of images
    invBinary: bool, with image threshold to invBinary or not
    ```
-   ```
    1) Median blur
    2) Gaussian blur
    3) Sharpening Box filter
@@ -21,7 +20,6 @@ No machine learning/data methods were used
    6) Sobel filteration
    7) Laplacian Approximation
    8) Normalisation
-   ```
 Phase two: 
     Identification
 ```
