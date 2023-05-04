@@ -55,9 +55,57 @@ No machine learning/data methods were used
   9) Increase Contrast 
   10) Canny edge detection
 
+   ### 4) Region Detection of Images:
+  def ROI_MSER(imagePath, automated):
+  ```
+  imagePath: path of images
+  automated: bool, whether or not the user selects the cropped square
+  ```
+  1) Grayscale
+  2) Canny edge detection
+  3) MinMaxLocator
+  4) Draw blue, red, black rectangles around specific intensity points
+  5) Blue rectangle: start point: *(min intenisty x max intensity )/2*
+                     end point: *start point x + image width/3, start point y + image height*
+  7) Red rectangle: start point: *(max intensity/2 + min intensity)/2*
+                    end point: *start point x + image width/2, start point y + image height* 
+  8) Black rectangle: start point:*(min intenisty + max intensity )/2*
+                      end point:*start point x + image width/3, start point y + image height*
+  9) Allow user to select and crop required area
   
-### Phase two: 
-    Identification
+   ### 5) Corner Harris Detection of Images:
+  def Corners(imagePath):
+  ```
+  imagePath: path of images
+  ```
+  1) Grayscale
+  2) Canny edge detection
+  3) Corner Harris Function
+  4) Corner thresholds
+
+   ### 6) Contouring and Digit Localisation in Images:
+  def ThresholdTrial(imagePath, lowerAreaThreshold, upperAreaThreshold, thresholdType, invBinary):
+  ```
+  imagePath: path of images
+  lowerAreaThreshold: lower threshold
+  upperAreaThreshold:upper threshold
+  thresholdType: string, type of threshold used
+  invBinary: bool, whether image threshold to invBinary or not
+  ```
+  1) Denoising coloured image
+  2) Grayscale
+  3) Gaussian Blur
+  4) Adaptive Mean Thresholding
+  5) Adaptive Gaussian Thresholding
+  6) Otsu Thresholding
+  7) Triangle Thresholding
+
+
+
+### Phase two:
+   ### Number Identification
+   
+   
 # Dependencies
 ```python
 from __future__ import print_function
