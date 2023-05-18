@@ -107,35 +107,6 @@ def MatchFeatures(img1, img2, v=False):
         return math.inf
 
 
-def Estimate_digit_area(image_size):
-    # Estimate the maximum and minimum sizes of the digits based on the image size
-    max_digit_height = int(image_size[0] * 0.8)  # assume maximum digit height is 80% of the image height
-    aspect_ratio = [0.38, 0.51, 0.54, 0.53, 0.55, 0.58, 0.53, 0.47, 0.57, 0.52]  # aspect ratio of digits 0-9
-    # Assume maximum digit width is 90% of the image width, adjusted by the maximum aspect ratio
-    max_digit_width = int(image_size[1] * 0.9 * max(aspect_ratio))
-    # Assume minimum digit height is 10% of the image height
-    min_digit_height = int(image_size[0] * 0.1)
-    # Assume minimum digit width is 10% of the image width, adjusted by the minimum aspect ratio
-    min_digit_width = int(image_size[1] * 0.1 * min(aspect_ratio))
-
-    # Calculate the approximate maximum and minimum area of the digit contours based on the estimated sizes
-    max_digit_area = (max_digit_height * max_digit_width)
-    min_digit_area = (min_digit_height * min_digit_width)
-
-    return min_digit_area, max_digit_area
-
-
-def CannyEdge(img):
-    # Reduce noise using bilateral filter
-    dst = cv2.bilateralFilter(img, 9, 75, 75)
-
-    # Apply Canny edge detection algorithm
-    canny = cv2.Canny(dst, 50, 100)
-
-    # Return the output image
-    return canny
-
-
 def testImages(v=False):
     # Load the dataset file
     print("Loading DataSet File..")
