@@ -54,3 +54,39 @@ No machine learning/data methods were used
    ```
 
 # Phase 2 Digit Classification:
+   ## Dependencies
+   ```python
+   import math
+   import cv2
+   import os
+   import sys
+   import numpy as np
+   import json
+   ```
+   ## Implemented Functionality
+   ```
+   • Normalization of Images
+   • Feature Extraction of Images
+   • Feature Matching between Images
+   • Digit Recognition
+   • Computation of Accuracy
+   ```
+   
+   ## Running The Code 'DigitRecognition.py'
+   #### Replace The following paths in testImages Function with the correct paths for your test images folder, digit templates folder and training.json file
+   ```python
+   dataSet = loadDataSet('training.json')
+   total = len(os.listdir('testImages'))
+   for filename in os.listdir("testImages")
+   imgReal = cv2.imread(os.path.join("testImages", filename))
+   template = os.path.join("digitTemplates", digitFilename)
+   ```
+   #### When v is set to true the Recognition Steps for the images are displayed
+   ```python
+   acc = testImages(v=True)
+   ```
+   ## Refrences
+   ```
+   docs.opencv.org
+   answers.opencv.org
+   ```
