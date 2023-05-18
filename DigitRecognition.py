@@ -136,27 +136,6 @@ def CannyEdge(img):
     return canny
 
 
-def LocalizeDigits(img):
-    # Find contours of the input image with external retrieval mode.
-    contours, _ = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-    # Estimate the minimum and maximum area of digit contours based on the input image size using a separate function.
-    minArea, maxArea = Estimate_digit_area(img.shape)
-
-    # Create an empty list to store final contours.
-    finalContours = []
-
-    # Iterate through all contours found earlier and keep only those that have an area between minArea and maxArea.
-    # Append the bounding rectangle of each selected contour to the finalContours list.
-    for contour in contours:
-        area = cv2.contourArea(contour)
-        if minArea < area < maxArea:
-            finalContours.append(cv2.boundingRect(contour))
-
-    # Return the list of bounding rectangles for localized digits.
-    return finalContours
-
-
 def testImages(v=False):
     # Load the dataset file
     print("Loading DataSet File..")
